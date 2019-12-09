@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  oracle-xe:
+    image: daggerok/oracle:11.2.0.2-xe
+    shm_size: 1g
+    environment:
+      - ORACLE_PWD=123456789
+      - ORACLE_SID=xe
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - "oracle-xe-data:/opt/oracle/oradata"
+    networks: [backing-services]
+    container_name: oracleDB
+
+volumes:
+  oracle-xe-data: {}
+
+networks:
+  backing-services:
+    driver: bridge
