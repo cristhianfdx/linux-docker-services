@@ -3,7 +3,7 @@
 **Steps to use:**
 
 1. Clone docker-services into ~/docker-services
-- `git clone https://gitlab.com/cristhiandgz/docker-services.git`
+- `git clone https://github.com/cristhianfdx/linux-docker-services`
 
 2. Give file permissions `install_db_services.sh`
 - `chmod +x install_db_services.sh`
